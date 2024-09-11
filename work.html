@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Header with Day/Night Toggle and Sticky Header</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="work.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>BetaMax</h1>
+        </div>
+        <nav class="nav-menu">
+            <ul id="nav-list">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="work.html">Works</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <div class="toggle-switch">
+            <input type="checkbox" id="theme-switch">
+            <label for="theme-switch"></label>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!--header-->
+
+    <!--portfolio gallery-->
+    <section class="portfolio">
+        <div class="portfolio-grid">
+            <h1 class="portfolio-heading">Works & Projects</h1>
+            <p class="subtitle">Check out some of my design projects, meticulously crafted with love and dedication, each one reflecting the passion and soul I poured into every detail.</p> 
+    
+            <div class="filter-buttons">
+                <button class="filter-btn" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="game">Game</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="marketing">Marketing</button>
+            </div>
+    
+            <div class="gallery">
+                <div class="gallery-item design">
+                    <div class="card">
+                        <div class="image-container">
+                            <img src="img/mobile-marketing.png" alt="Mobile Application Design">
+                            <div class="overlay">
+                                <a href="https://example.com/mobile-app-design" class="arrow-circle">
+                                    <div class="diagonal-arrow"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <span class="category">Design</span>
+                            <h3>Mobile Application Design</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item design">
+                    <div class="card">
+                        <div class="image-container">
+                            <img src="img/website.jpg" alt="Website Design">
+                            <div class="overlay">
+                                <a href="https://example.com/website-design" class="arrow-circle">
+                                    <div class="diagonal-arrow"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <span class="category">Design</span>
+                            <h3>Website Design</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item game">
+                    <div class="card">
+                        <div class="image-container">
+                            <img src="img/mobile-marketing.png" alt="Game UI Design">
+                            <div class="overlay">
+                                <a href="https://example.com/game-ui-design" class="arrow-circle">
+                                    <div class="diagonal-arrow"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <span class="category">Game</span>
+                            <h3>Game UI Design</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item branding">
+                    <div class="card">
+                        <div class="image-container">
+                            <img src="img/brand identity.jpg" alt="Brand Identity">
+                            <div class="overlay">
+                                <a href="https://example.com/brand-identity" class="arrow-circle">
+                                    <div class="diagonal-arrow"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <span class="category">Branding</span>
+                            <h3>Brand Identity</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item marketing">
+                    <div class="card">
+                        <div class="image-container">
+                            <img src="img/mobile-marketing.png" alt="Digital Marketing Campaign">
+                            <div class="overlay">
+                                <a href="https://example.com/digital-marketing-campaign" class="arrow-circle">
+                                    <div class="diagonal-arrow"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <span class="category">Marketing</span>
+                            <h3>Digital Marketing Campaign</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item marketing">
+                    <div class="card">
+                        <div class="image-container">
+                            <img src="img/motion.png" alt="Social Media Strategy">
+                            <div class="overlay">
+                                <a href="https://example.com/social-media-strategy" class="arrow-circle">
+                                    <div class="diagonal-arrow"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item-details">
+                            <span class="category">Marketing</span>
+                            <h3>Social Media Strategy</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+    
+    <!--portfolio gallery-->
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p class="copyright">
+                All Rights Reserved. 2024 <span class="brand">&copy; BentaMax</span>
+            </p>
+            <div class="to-top" onclick="scrollToTop()">
+                <div class="circle">
+                    <i class="arrow-up">⬆️</i>
+                </div>
+            </div>
+        </div>
+    </footer>  
+    <!--footer-->
+    
+    <!-- External JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="work.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Header with Day/Night Toggle and Sticky Header</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Load font awesome icons for social bar -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>BetaMax</h1>
+        </div>
+        <nav class="nav-menu">
+            <ul id="nav-list">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="work.html">Works</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="toggle-switch">
+            <input type="checkbox" id="theme-switch">
+            <label for="theme-switch"></label>
+        </div>
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!--header-->
+
+    <!--contact-->
+
+    <div class="contact-section">
+      <h1>Get in Touch With Me!</h1>
+      <div class="info-bar">
+          <button class="info-item">
+              <i class="fas fa-map-marker-alt"></i> Our Office: Gulshan, Dhaka, Bangladesh
+          </button>
+          <button class="info-item">
+              <i class="fas fa-phone-alt"></i> Contact Number: +8801318283468
+          </button>
+          <button class="info-item">
+              <i class="fas fa-envelope"></i> Email us: testemail@example.com
+          </button>
+      </div>
+
+      <div class="contact-container">
+          <div class="form-container">
+              <form id="contactForm">
+                  <label for="fullName">Full Name</label>
+                  <input type="text" id="fullName" name="fullName" required>
+
+                  <label for="emailAddress">Email Address</label>
+                  <input type="email" id="emailAddress" name="emailAddress" required>
+
+                  <label for="message">Your Message</label>
+                  <textarea id="message" name="message" required></textarea>
+
+                  <button type="submit" class="submit-btn">Send me message</button>
+              </form>
+          </div>
+
+          <div class="map-container">
+              <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.840744487137!2d90.3871823154323!3d23.750471494346684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c755841f34b1%3A0x6d60a5fb99ef2363!2sGulshan%2C%20Dhaka%201215%2C%20Bangladesh!5e0!3m2!1sen!2sbd!4v1635679389887!5m2!1sen!2sbd"
+                  width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+      </div>
+  </div>
+
+  <div id="toast">Thank you for your message. We'll get to you shortly!</div>
+
+    <!--contact-->
+
+    <!--social bar-->
+    <div class="icon-bar">
+      <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+      <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+      <a href="#" class="google"><i class="fa fa-google"></i></a>
+      <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+    </div>
+    <!--social bar-->
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p class="copyright">
+              All Rights Reserved. 2024 <span class="brand">&copy; BentaMax</span>
+            </p>
+            <div class="to-top" onclick="scrollToTop()">
+                <div class="circle">
+                    <i class="arrow-up">⬆️</i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!--footer-->
+        <!-- External JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="contact.js"></script>
+    </body>
+    </html>
+    

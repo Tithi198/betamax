@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Header with Day/Night Toggle and Sticky Header</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="service.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>BetaMax</h1>
+        </div>
+        <nav class="nav-menu">
+            <ul id="nav-list">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="work.html">Works</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="toggle-switch">
+            <input type="checkbox" id="theme-switch">
+            <label for="theme-switch"></label>
+        </div>
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+    <!--header-->
+
+    <!--services-->
+
+    <section class="services-section">
+        <h2 class="section-title">Quality Services</h2>
+        <div class="services-container">
+          <div class="service-card">
+            <div class="icon">
+              <img src="https://img.icons8.com/ios-filled/50/000000/globe.png" alt="Brand Identity Icon">
+            </div>
+            <h3>Brand Identity Design</h3>
+            <p>Bentos gives you the blocks & kits you need to create a true website within minutes.</p>
+          </div>
+      
+          <div class="service-card">
+            <div class="icon">
+              <img src="https://img.icons8.com/ios-filled/50/000000/leaf.png" alt="Website Design Icon">
+            </div>
+            <h3>Website Design</h3>
+            <p>Bentos gives you the blocks & kits you need to create a true website within minutes.</p>
+          </div>
+      
+          <div class="service-card">
+            <div class="icon">
+              <img src="https://img.icons8.com/ios-filled/50/000000/phone.png" alt="Application Design Icon">
+            </div>
+            <h3>Application Design</h3>
+            <p>Bentos gives you the blocks & kits you need to create a true website within minutes.</p>
+          </div>
+        </div>
+      </section>
+      
+    <!--services-->
+    <!--pricing-->
+
+    <section class="pricing-section">
+        <h2 class="section-title">Flexible Pricing Plan</h2>
+        <div class="pricing-container">
+          <div class="pricing-card">
+            <div class="pricing-package">
+              <h3>Basic</h3>
+              <p>Have design ready to build? or small budget</p>
+              <span class="price">$15/Hour</span>
+            </div>
+            <ul>
+              <li><span class="arrow">➔</span> Need your wireframe</li>
+              <li><span class="arrow">➔</span> Design with Figma, Framer</li>
+              <li><span class="arrow">➔</span> Product Design</li>
+              <li><span class="arrow">➔</span> Digital Marketing</li>
+              <li><span class="arrow">➔</span> Custom Support</li>
+            </ul>
+            <button class="order-btn" onclick="showToast()">Order Now</button>
+          </div>
+          <div class="pricing-card">
+            <div class="pricing-package">
+              <h3>Standard</h3>
+              <p>Not have any design? Leave its for me</p>
+              <span class="price">$59/Hour</span>
+            </div>
+            <ul>
+              <li><span class="arrow">➔</span> Website Design</li>
+              <li><span class="arrow">➔</span> Mobile Apps Design</li>
+              <li><span class="arrow">➔</span> Product Design</li>
+              <li><span class="arrow">➔</span> Digital Marketing</li>
+              <li><span class="arrow">➔</span> Custom Support</li>
+            </ul>
+            <button class="order-btn" onclick="showToast()">Order Now</button>
+          </div>
+          <div class="pricing-card">
+            <div class="pricing-package">
+              <h3>Gold</h3>
+              <p>Have design ready to build? or small budget</p>
+              <span class="price">$100/Hour</span>
+            </div>
+            <ul>
+              <li><span class="arrow">➔</span> Website Design</li>
+              <li><span class="arrow">➔</span> Mobile Apps Design</li>
+              <li><span class="arrow">➔</span> Product Design</li>
+              <li><span class="arrow">➔</span> Digital Marketing</li>
+              <li><span class="arrow">➔</span> Custom Support</li>
+            </ul>
+            <button class="order-btn" onclick="showToast()">Order Now</button>
+          </div>
+        </div>
+        <div id="toast" class="toast">Thank you! Your order has been placed successfully.</div>
+      </section>
+      
+    <!--pricing-->
+
+    <!--testimonial-->
+
+    <section class="body">
+      <div class="section-header">
+        <h2 class="section-title">What Clients Say</h2>
+      </div>
+      <input type="radio" name="position" checked />
+      <input type="radio" name="position" />
+      <input type="radio" name="position" />
+      <input type="radio" name="position" />
+      <input type="radio" name="position" />
+      <main id="carousel">
+        <div class="item">
+          <div class="review">
+            <p>"Great service and fantastic product! Will definitely recommend!"</p>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>- Angelina</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="review">
+            <p>"Absolutely love it! Quick delivery and amazing support."</p>
+            <div class="stars">⭐⭐⭐⭐</div>
+            <p>- Robert</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="review">
+            <p>"Good value for money. Could improve packaging."</p>
+            <div class="stars">⭐⭐⭐⭐</div>
+            <p>- Amir</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="review">
+            <p>"Satisfied with the product. Customer service could be better."</p>
+            <div class="stars">⭐⭐⭐</div>
+            <p>- Farzana</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="review">
+            <p>"Excellent quality! Exceeded my expectations!"</p>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>- Farhana</p>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <!--testimonial-->
+
+    <!-- Footer -->
+
+    <footer>
+        <div class="footer-content">
+            <p class="copyright">
+                All Rights Reserved. 2024 <span class="brand">&copy; BentaMax</span>
+            </p>
+            <div class="to-top" onclick="scrollToTop()">
+                <div class="circle">
+                    <i class="arrow-up">⬆️</i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+ 
+    <!--footer-->
+
+
+
+    <!-- External JavaScript -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="service.js"></script>
+</body>
+</html>
+

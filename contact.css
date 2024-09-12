@@ -167,7 +167,7 @@ body.dark-mode {
 :root {
   --bg-color: #ffffff;
   --text-color: #333333;
-  --form-bg-color: #f0f0f0;
+  --form-bg-color: #d2d2d2;
   --form-text-color: #333333;
   --input-bg-color: #ffffff;
   --input-text-color: #333333;
@@ -175,6 +175,7 @@ body.dark-mode {
   --button-text-color: #ffffff;
   --info-item-bg: #dddddd;
   --info-item-text: #333333;
+  
 }
 
 .dark-mode {
@@ -188,6 +189,7 @@ body.dark-mode {
   --button-text-color: #333333;
   --info-item-bg: #444444;
   --info-item-text: #ffffff;
+  
 }
 
 .contact-section {

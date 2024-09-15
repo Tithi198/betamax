@@ -511,7 +511,7 @@ body.dark-mode {
 
 /*education*/
 
-  .containers {
+.containers {
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -519,9 +519,9 @@ body.dark-mode {
     margin-top: 40px;
     margin-bottom: 40px;
     padding: 30px;
-  }
-  
-  .experience-container, .education-container {
+}
+
+.experience-container, .education-container {
     background-color: var(--background-color);
     color: var(--text-color);
     border-radius: 8px;
@@ -530,50 +530,54 @@ body.dark-mode {
     width: 100%;
     max-width: 500px;
     box-sizing: border-box;
-  }
   
-  .heading {
+}
+
+div p{
+  margin-bottom: 12px;
+  font-size: 17px;
+}
+
+.heading {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 20px;
     color: var(--header-color);
-  }
-  
-  .row-item {
+    text-align: center;
+    padding-bottom: 8px;
+}
+
+.row-item {
     margin-bottom: 20px;
     display: flex;
     align-items: flex-start;
-  }
-  
-  .timeline {
-    width: 2px;
-    background-color: var(--timeline-color);
-    height: 60px;
-    position: relative;
+}
+
+.timeline-container {
+    display: flex;
+    align-items: center;
     margin-right: 20px;
+}
+
+.timeline {
+    display: flex;
+    align-items: center;
+}
+
+.timeline i {
+    font-size: 18px;
+    color: var(--timeline-color);
+    margin-left: 6px;
     margin-top: 6px;
-  }
-  
-  .circle {
-    width: 12px;
-    height: 12px;
-    background-color: var(--timeline-color);
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    left: -6px;
-  }
-  
-  .row-item:last-child .timeline {
-    height: 50px;
-  }
-  
-  .row-divider {
+}
+
+.row-divider {
     border-top: 1px solid var(--timeline-color);
     opacity: 0.5;
     margin-top: 10px;
     margin-bottom: 20px;
-  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .containers {
@@ -601,8 +605,22 @@ body.dark-mode {
     }
 
     .row-item {
+        flex-direction: row;
+        align-items: flex-start;
         margin-bottom: 15px;
     }
+
+    .timeline-container {
+        margin-right: 15px; /* Adjust spacing on mobile screens */
+    }
+
+    .timeline i {
+        font-size: 12px; /* Adjust icon size for mobile */
+        margin-left: 4px;
+        margin-top: 8px;
+       
+    }
+  
 }
 
 /*education*/

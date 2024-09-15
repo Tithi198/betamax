@@ -53,11 +53,18 @@ filterButtons.forEach(button => {
     });
 });
 // Lightbox functionality
+// Lightbox functionality
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeBtn = document.querySelector('.close');
+
+const galleryItem = document.querySelectorAll('.gallery-item');
+
 galleryItems.forEach(item => {
     item.addEventListener('click', () => {
         const imgSrc = item.querySelector('img').src;
         lightboxImg.src = imgSrc;
-        lightbox.style.display = 'block';
+        lightbox.style.display = 'flex';
     });
 });
 
@@ -70,6 +77,7 @@ lightbox.addEventListener('click', (e) => {
         lightbox.style.display = 'none';
     }
 });
+
 
 
 

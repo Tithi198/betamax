@@ -140,6 +140,7 @@ body.dark-mode {
   color: var(--text-color);
   font-size: 24px;
   cursor: pointer;
+  
 }
 
 @media (max-width: 768px) {
@@ -156,6 +157,8 @@ body.dark-mode {
   
   .nav-menu ul.active {
       left: 0;
+      justify-content: center;
+      align-items: center;
   }
   
   .nav-menu ul li {

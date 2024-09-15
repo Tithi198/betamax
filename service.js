@@ -1,24 +1,38 @@
-//header//
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleSwitch = document.querySelector("#theme-switch");
+    const body = document.body;
 
-        // Day/Night Mode Toggle//
-        const toggleSwitch = document.querySelector("#theme-switch");
-        const body = document.body;
+    const switchTheme = (theme) => {
+        if (theme === "dark") {
+            body.classList.add("dark-mode");
+            toggleSwitch.checked = true;
+        } else {
+            body.classList.remove("dark-mode");
+            toggleSwitch.checked = false;
+        }
+    };
 
-        toggleSwitch.addEventListener("change", () => {
-            if (toggleSwitch.checked) {
-                body.classList.add("dark-mode");
-            } else {
-                body.classList.remove("dark-mode");
-            }
-        });
+    // Apply the saved theme preference immediately on load
+    const currentTheme = localStorage.getItem("theme") || "light";
+    switchTheme(currentTheme);
 
-        // Mobile Menu Toggle
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navList = document.getElementById('nav-list');
+    // Toggle theme on user action
+    toggleSwitch.addEventListener("change", () => {
+        const theme = toggleSwitch.checked ? "dark" : "light";
+        switchTheme(theme);
+        localStorage.setItem("theme", theme);
+    });
 
-        mobileMenu.addEventListener('click', () => {
-            navList.classList.toggle('active');
-        });
+    // Mobile Menu Toggle
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navList = document.getElementById('nav-list');
+
+    mobileMenu.addEventListener('click', () => {
+        navList.classList.toggle('active');
+    });
+});
+
+// pricing, footer, testimonial, and other functions
 
 
         //pricing

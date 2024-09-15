@@ -1,10 +1,35 @@
-
 :root {
   --primary-bg: #1a1a1a;
   --secondary-bg: #2a2a2a;
-  --text-color: #ffffff;
-  --border-color: #ffffff;
+  --bg-color: #ffffff;
+  --text-color: #111;
+  --header-bg: #f5f5f5;
+  --header-shadow: rgba(0, 0, 0, 0.3);
+  --hover-color: #f09400;
+  --btn-bg-color:#fb1313;   
+  --switch-bg: rgb(247, 93, 93);
+  --switch-color: #ffffff;
+  --border-color: #e0e0e0;
+  --hover-border-color: #000000;
+  --subtext-color: #7a7a7a;
+  --box-shadow: 0 0 10px rgb(29, 28, 28);
 }
+
+.dark-mode {
+  --bg-color: #111111;
+  --text-color: #ffffff;
+  --header-bg: #222222;
+  --header-shadow: rgba(212, 212, 212, 0.5);
+  --hover-color: #f09400;
+  --btn-bg-color:#f04000;
+  --switch-bg: #ffffff;
+  --switch-color: #f39c12;
+  --border-color: #333333;
+  --hover-border-color: #ed8f03;
+  --subtext-color: #bbbbbb;
+  --box-shadow: 0 0 10px rgb(236, 233, 233);
+}
+
 
 * {
   margin: 0;
@@ -16,6 +41,8 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -23,29 +50,8 @@ body.dark-mode {
   background-color: var(--primary-bg);
   color: var(--text-color);
 }
-/*header*/
-:root {
-  --bg-color: #ffffff;
-  --text-color: #000000;
-  --header-bg: #f5f5f5;
-  --header-shadow: rgba(0, 0, 0, 0.3);
-  --hover-color: #f09400;
-  --switch-bg: rgb(247, 93, 93);
-  --switch-color: #ffffff;
-}
 
-.dark-mode {
-  --bg-color: #111111;
-  --text-color: #ffffff;
-  --header-bg: #222222;
-  --header-shadow: rgb(212, 212, 212, 0.5);
-  --hover-color: #f09400;
-  --switch-bg: #ffffff;
-  --switch-color: #f39c12;
-}
-
-
-
+/* Header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -70,6 +76,7 @@ body.dark-mode {
   display: flex;
   list-style: none;
   transition: all 0.3s;
+  margin-top: 12px;
 }
 
 .nav-menu ul li {
@@ -161,30 +168,8 @@ body.dark-mode {
       margin-right: 20px;
   }
 }
-/*header*/
 
 /*services*/
-
-:root {
-  --bg-color: #ffffff;
-  --text-color: #000000;
-  --border-color: #e0e0e0;
-  --hover-border-color: #000000; /* day */
-  --subtext-color: #7a7a7a;
-  --box-shadow: 0 0 10px rgb(29, 28, 28);
-  
-}
-
-.dark {
-
-      --bg-color: #1e1e1e;
-      --text-color: #ffffff;
-      --border-color: #333333;
-      --hover-border-color: #ed8f03;
-      --subtext-color: #bbbbbb;
-      --box-shadow: 0 0 10px rgb(236, 233, 233);
-     
-  }
 
 .services-section {
     padding: 40px;
@@ -200,7 +185,7 @@ body.dark-mode {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    flex-wrap: wrap; /* Ensures cards wrap on smaller screens */
+    flex-wrap: wrap; 
   }
   
   .service-card {
@@ -218,7 +203,7 @@ body.dark-mode {
   .service-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    border-color: var(--hover-border-color); /* Change border on hover */
+    border-color: var(--hover-border-color); 
   }
   
   .service-card h3 {
@@ -235,10 +220,9 @@ body.dark-mode {
   .icon img {
     width: 50px;
     height: 50px;
-    filter: invert(70%); /* Always white */
+    filter: invert(70%); 
   }
   
-  /* Responsive Adjustments */
   @media (max-width: 768px) {
     .services-container {
       flex-direction: column;
@@ -251,36 +235,7 @@ body.dark-mode {
     }
   }
    
-/*services*/
-
 /*pricing*/
-
-:root {
-  --bg-color: #f2f2f2;
-  --text-color: #333;
-  --border-color: #ccc;
-  --package-bg: #f4f4f4;
-  --price-color: #007bff;
-  --arrow-color: #007bff;
-  --btn-bg-color: #007bff;
-  --btn-text-color: #fff;
-  --hover-border-color: #060606;
-  --btn-hover-color: #111;
-}
-
-.dark-mode {
-  --bg-color: #333;
-  --text-color: #f2f2f2;
-  --border-color: #555555;
-  --hover-border-color: #f45500;
-  --package-bg: #444;
-  --price-color: #4da6ff;
-  --arrow-color: #4da6ff;
-  --btn-bg-color: #ffffff;
-  --btn-text-color: #000000;
-  --btn-hover-color: #f7bf7c;
-  
-}
 
 .pricing-section {
   padding: 40px;
@@ -374,7 +329,7 @@ ul li {
 .order-btn:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  background-color: var(--btn-hover-color);
+  background-color: var(--hover-color);
 }
 
 #toast {
@@ -448,21 +403,7 @@ ul li {
   }
 }
   
-/*pricing*/
-
 /*testimonial*/
-
-:root {
-  --background-color: #f2f2f2;
-  --text-color: #333;
-  --carousel-item-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.dark-mode {
-  --background-color: #333;
-  --text-color: #f2f2f2;
-  --carousel-item-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
-}
 
 .body {
   height: auto;
@@ -529,8 +470,8 @@ div.item {
 div.item:nth-of-type(1) { --offset: 1; background-color: #47cac8; }
 div.item:nth-of-type(2) { --offset: 2; background-color: #fc478c; }
 div.item:nth-of-type(3) { --offset: 3; background-color: #fd7543; }
-div.item:nth-of-type(4) { --offset: 4; background-color: #ebd6a3; }
-div.item:nth-of-type(5) { --offset: 5; background-color: #ceda89; }
+div.item:nth-of-type(4) { --offset: 4; background-color: #434ff8; }
+div.item:nth-of-type(5) { --offset: 5; background-color: #6d8004; }
 
 .review {
   text-align: center;
@@ -553,7 +494,6 @@ input:nth-of-type(4):checked ~ main#carousel { --position: 4; }
 input:nth-of-type(5) { grid-column: 6 / 7; grid-row: 3 / 4; }
 input:nth-of-type(5):checked ~ main#carousel { --position: 5; }
 
-/* Media Queries */
 @media (max-width: 768px) {
   div.item {
     width: 250px;
@@ -573,8 +513,8 @@ input:nth-of-type(5):checked ~ main#carousel { --position: 5; }
     font-size: 1.2em;
   }
 }
-/*testimonial*/
-/*footer*/
+
+/* Footer */
 
 footer {
     background-color: #000; /* Black background */
@@ -626,7 +566,7 @@ footer p {
     background-color: #ddd; /* Slight hover effect for better UX */
 }
 
-.arrow-up {
+.circle i   {
     font-size: 20px;
     color: #000;
 }
@@ -643,7 +583,7 @@ footer p {
         height: 40px;
     }
 
-    .arrow-up {
+    .circle i  {
         font-size: 18px;
     }
 
@@ -659,7 +599,7 @@ footer p {
         height: 40px;
     }
 
-    .arrow-up {
+    .circle i  {
         font-size: 16px;
     }
 
@@ -683,9 +623,7 @@ footer p {
         height: 35px;
     }
 
-    .arrow-up {
+    .circle i  {
         font-size: 14px;
     }
 }
-
-/*footer*/

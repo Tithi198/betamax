@@ -1,9 +1,69 @@
-
 :root {
     --primary-bg: #1a1a1a;
     --secondary-bg: #2a2a2a;
-    --text-color: #ffffff;
     --border-color: #ffffff;
+    --bg-color: #ffffff;
+    --header-bg: #f5f5f5;
+    --header-shadow: rgba(0, 0, 0, 0.3);
+    --hover-color: #f09400;
+    --switch-bg: rgb(247, 93, 93);
+    --switch-color: #ffffff;
+    --text-color: #131313;
+    --text-color-muted: #7a7a7a;
+    --accent-color: #ed8f03;
+    --button-bg: #252525;
+    --button-text: #ffffff;
+    --button-hover-bg: #2ecc71;
+    --button-border: #ffffff;
+    --image-border: #595858;
+    --box-bg: #ffffff;
+    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    --border-color: #ddd;
+    --personal-details-bg: #f5f5f5;
+    --animated-text-color: #ff7b00;
+    --background-color: #dfdfdf;  
+    --header-color: #ef0000;
+    --timeline-color: #343333; 
+    --circle-bg: #797979;
+    --circle-fill: #e63946;
+    --skill-bg-color: #c6c6c6;
+    --box-shadows: 0 4px 10px #111;
+    --color-text: #111;
+    --back-colors: #cdcccc;
+    --container-color: #7b7b7b;
+    
+}
+
+.dark-mode {
+    --bg-color: #111111;
+    --header-bg: #1d1d1d;
+    --header-shadow:rgba(212, 212, 212, 0.5);
+    --hover-color: #f39c12;
+    --switch-bg: #ffffff;
+    --switch-color: #f39c12;
+    --text-color: #ffffff;
+    --text-color-muted: #d7d6d6;
+    --accent-color: #ff9900;
+    --button-bg: #333333;
+    --button-text: #ffffff;
+    --button-hover-bg: #2e9fcc;
+    --button-border: #4a4a4a;
+    --image-border: #777777;
+    --box-bg: #1b1b1b;
+    --box-shadow: 0 4px 10px rgba(255, 255, 255, 0.842);
+    --border-color: #444444;
+    --personal-details-bg: rgba(70, 70, 70, 0.5);
+    --animated-text-color: #ffc107;
+    --background-color: #373737;
+    --header-color: #f1bd6f;
+    --timeline-color: #d5d5d5;
+    --circle-bg: #797979;
+    --circle-fill: #ff8e0e;
+    --skill-bg-color: #373737;
+    --back-colors: #333;
+    --color-text: #ffffff;
+    --box-shadows: 0 4px 10px #cbc9c9;
+    --container-color: #454545;
 }
 
 * {
@@ -16,6 +76,8 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -23,29 +85,8 @@ body.dark-mode {
     background-color: var(--primary-bg);
     color: var(--text-color);
 }
-/*header*/
-:root {
-    --bg-color: #ffffff;
-    --text-color: #000000;
-    --header-bg: #f5f5f5;
-    --header-shadow: rgba(0, 0, 0, 0.3);
-    --hover-color: #f09400;
-    --switch-bg: rgb(247, 93, 93);
-    --switch-color: #ffffff;
-}
 
-.dark-mode {
-    --bg-color: #111111;
-    --text-color: #ffffff;
-    --header-bg: #222222;
-    --header-shadow: rgb(212, 212, 212, 0.5);
-    --hover-color: #f09400;
-    --switch-bg: #ffffff;
-    --switch-color: #f39c12;
-}
-
-
-
+/* Header */
 .header {
     display: flex;
     justify-content: space-between;
@@ -70,6 +111,7 @@ body.dark-mode {
     display: flex;
     list-style: none;
     transition: all 0.3s;
+    margin-top: 12px;
 }
 
 .nav-menu ul li {
@@ -104,7 +146,7 @@ body.dark-mode {
     border-radius: 50px;
     position: relative;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 #theme-switch + label:before {
@@ -161,41 +203,10 @@ body.dark-mode {
         margin-right: 20px;
     }
 }
+
 /*header*/
 
 /*hero*/
-
-/* Define CSS variables for theme colors */
-:root {
-    --bg-color: #ffffff;
-    --text-color: #131313;
-    --text-color-muted: #7a7a7a;
-    --accent-color: #ed8f03;
-    --button-bg: #252525;
-    --button-text: #ffffff;
-    --button-hover-bg: #2ecc71;
-    --button-border: #ffffff;
-    --image-border: #595858;
-}
-
-/* Dark theme colors */
-.dark-mode {
-    --bg-color: #1a1a1a;
-    --text-color: #ffffff;
-    --text-color-muted: #d7d6d6;
-    --accent-color: #ff9900;
-    --button-bg: #333333;
-    --button-text: #ffffff;
-    --button-hover-bg: #2e9fcc;
-    --button-border: #4a4a4a;
-    --image-border: #777777;
-}
-
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s;
-}
 
 .hero-section {
     display: flex;
@@ -369,26 +380,6 @@ body {
 
 /*personal details*/
 
-:root {
-    --text-color: #333333;
-    --box-bg: #ffffff;
-    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    --border-color: #ddd;
-    --personal-details-bg: #f5f5f5;
-    --animated-text-color: #ff7b00;
-    --background-color: #dfdfdf;   
-}
-
-.dark-mode {
-    --text-color: #ffffff;
-    --box-bg: #1b1b1b;
-    --box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
-    --border-color: #444444;
-    --personal-details-bg: rgba(70, 70, 70, 0.5);
-    --animated-text-color: #ffc107;
-    --background-color: #373737;   
-}
-
 .bod {
     border-top: 0.5px solid var(--border-color);
     color: var(--text-color);
@@ -520,24 +511,6 @@ body {
 
 /*education*/
 
-:root {
-    --background: #ffffff;
-    --text-color: #333333;
-    --header-color: #f7b046;
-    --box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
-    --timeline-color: #343333;
-    
-  }
-  
-.dark-mode {
-    --background: #1a1a1a;
-    --text-color: #e0e0e0;
-    --header-color: #f1bd6f;
-    --box-shadow: 0 4px 6px rgb(207, 207, 207);
-    --timeline-color: #d5d5d5;
-    
-  }
-  
   .containers {
     display: flex;
     gap: 20px;
@@ -549,7 +522,7 @@ body {
   }
   
   .experience-container, .education-container {
-    background-color: var(--background);
+    background-color: var(--background-color);
     color: var(--text-color);
     border-radius: 8px;
     box-shadow: var(--box-shadow);
@@ -635,26 +608,6 @@ body {
 /*education*/
 
 /*skill*/
-:root {
-    --background: #dfdfdf;
-    --text-color: #333;
-    --circle-bg: #797979;
-    --circle-fill: #e63946;
-    --box-shadow:  0 4px 10px rgba(0, 0, 0, 0.3);
-    --skill-bg-color: #c6c6c6;
-
-}
-
-.dark-mode {
-    --background: #1f1f1f;
-    --text-color: #f5f5f5;
-    --circle-bg: #797979;
-    --circle-fill: #ff8e0e;
-    --box-shadow: 0 4px 10px rgb(255, 255, 255);
-    --skill-bg-color: #373737;
-
-}
-
 
 .skills-section {
     padding: 20px;
@@ -668,7 +621,7 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     height: auto;
-    background-color: var(--background);
+    background-color: var(--background-color);
     color: var(--text-color);
     padding: 40px;
     border-radius: 12px;
@@ -745,18 +698,6 @@ body {
 
 /*newsletter*/
 
-:root{
-    --box-shadow: 0 4px 10px #111;
-    --color-text: #111;
-    --background-color: #cdcccc;
-    --container-color: #7b7b7b;
-}
-.dark-mode{
-    --background-color: #333;
-    --color-text: #ffffff;
-    --box-shadow: 0 4px 10px #cbc9c9;
-    --container-color: #454545;
-}
 .newsletter-section {
     padding: 20px;
     text-align: center;
@@ -767,11 +708,11 @@ body {
 .container-news {
     max-width: 800px;
     margin: 0 auto;
-    background-color: var(--background-color);
+    background-color: var(--back-colors);
     color: var( --container-color);
     padding: 30px;
     border-radius: 12px;
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadows);
     justify-content: center;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -944,7 +885,7 @@ footer p {
     background-color: #ddd; /* Slight hover effect for better UX */
 }
 
-.arrow-up {
+.circlee i {
     font-size: 20px;
     color: #000;
 }
@@ -961,7 +902,7 @@ footer p {
         height: 40px;
     }
 
-    .arrow-up {
+    .circle i  {
         font-size: 18px;
     }
 
@@ -970,41 +911,6 @@ footer p {
     }
 }
 
-/* Extra Small Screens (Mobile) */
-@media (max-width: 576px) {
-    .circlee {
-        width: 40px;
-        height: 40px;
-    }
-
-    .arrow-up {
-        font-size: 16px;
-    }
-
-    footer p {
-        font-size: 12px;
-    }
-
-    .footer-content {
-        padding: 0 10px;
-    }
-}
-
-/* Ensuring proper padding and margin on smaller screens */
-@media (max-width: 360px) {
-    footer {
-        padding: 15px;
-    }
-
-    .circlee {
-        width: 35px;
-        height: 35px;
-    }
-
-    .arrow-up {
-        font-size: 14px;
-    }
-}
 
 /*footer*/
 

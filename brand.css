@@ -1,9 +1,43 @@
-
 :root {
     --primary-bg: #1a1a1a;
     --secondary-bg: #2a2a2a;
-    --text-color: #ffffff;
     --border-color: #ffffff;
+    --bg-color: #ffffff;
+    --header-bg: #f5f5f5;
+    --header-shadow: rgba(0, 0, 0, 0.3);
+    --hover-color: #f09400;
+    --switch-bg: rgb(247, 93, 93);
+    --switch-color: #ffffff;
+    --text-color: #000;
+    --header-color: #333;
+    --card-bg-color: #f5f5f5;
+    --card-shadow: 0 4px 10px rgba(0,0,0, 0.3);
+    --subtext-color: #666666;
+    --info-subtext: #4e4e4e;
+    --info-header:#333333;
+    --button-bg: #ff5722;
+    --button-text: #ffffff;
+    --container-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.dark-mode {
+    --bg-color: #111111;
+    --header-bg: #1d1d1d;
+    --header-shadow: rgba(212, 212, 212, 0.5);
+    --hover-color: #f39c12;
+    --switch-bg: #ffffff;
+    --switch-color: #f39c12;
+    --text-color: #ddd;
+    --header-color: #ffffff;
+    --card-bg-color: #2a2a2a;
+    --card-shadow: 0 4px 10px rgb(207, 206, 206);
+    --subtext-color: #adabab;
+    --info-subtext: #adabab;
+    --info-header:#ffffff;
+    --button-bg: #ff5722;
+    --button-text: #ffffff;
+    --container-shadow: 0px 0px 5px 5px rgba(189, 0, 0, 0.5);
 }
 
 * {
@@ -16,6 +50,8 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -23,29 +59,8 @@ body.dark-mode {
     background-color: var(--primary-bg);
     color: var(--text-color);
 }
-/*header*/
-:root {
-    --bg-color: #ffffff;
-    --text-color: #000000;
-    --header-bg: #f5f5f5;
-    --header-shadow: rgba(0, 0, 0, 0.3);
-    --hover-color: #f09400;
-    --switch-bg: rgb(247, 93, 93);
-    --switch-color: #ffffff;
-}
 
-.dark-mode {
-    --bg-color: #111111;
-    --text-color: #ffffff;
-    --header-bg: #222222;
-    --header-shadow: rgb(212, 212, 212, 0.5);
-    --hover-color: #f09400;
-    --switch-bg: #ffffff;
-    --switch-color: #f39c12;
-}
-
-
-
+/* Header */
 .header {
     display: flex;
     justify-content: space-between;
@@ -70,6 +85,7 @@ body.dark-mode {
     display: flex;
     list-style: none;
     transition: all 0.3s;
+    margin-top: 12px;
 }
 
 .nav-menu ul li {
@@ -161,21 +177,11 @@ body.dark-mode {
         margin-right: 20px;
     }
 }
+
+
 /*header*/
 
 /*brand*/
-
-:root {
-    --bg-color: #fff;
-    --text-color: #000;
-    --header-color: #333;
-}
-
-.dark-mode {
-    --bg-color: #282828;
-    --text-color: #ddd;
-    --header-color: #ccc;
-}
 
 .section {
     text-align: center;
@@ -218,28 +224,6 @@ body.dark-mode {
 
 /*part 1*/
 
- 
-:root {
-    --bg-color: #ffffff;
-    --text-color: #000000;
-    --card-bg-color: #f5f5f5;
-    --card-shadow: 0 4px 10px rgba(0,0,0, 0.3);
-    --header-color: #333333;
-    --subtext-color: #666666;
-    --info-subtext: #4e4e4e;
-    --info-header:#333333;
-}
-
-.dark-mode {
-    --bg-color: #121212;
-    --text-color: #ffffff;
-    --card-bg-color: #2a2a2a;
-    --card-shadow: 0 4px 10px rgb(207, 206, 206);
-    --header-color: #ffffff;
-    --subtext-color: #b8b8b8;
-    --info-subtext: #d2d2d2;
-    --info-header:#d2d2d2;
-}
 
 .container {
     max-width: 1200px;
@@ -354,25 +338,6 @@ body.dark-mode {
 /*part 2*/
 
 /*kickstart section*/
-:root {
-    --bg-color: #ffffff;
-    --text-color: #333333;
-    --subtext-color: #666666;
-    --button-bg: #ff5722;
-    --button-text: #ffffff;
-    --container-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
-    
-}
-
-.dark-mode {
-    --bg-color: #121212;
-    --text-color: #ffffff;
-    --subtext-color: #b3b3b3;
-    --button-bg: #ff5722;
-    --button-text: #ffffff;
-    --container-shadow: 0px 0px 5px 5px rgba(189, 0, 0, 0.5);
-   
-}
 
 .main-container {
     background-color: var(--bg-color);
@@ -514,7 +479,7 @@ footer p {
     background-color: #ddd; /* Slight hover effect for better UX */
 }
 
-.arrow-up {
+.circle i  {
     font-size: 20px;
     color: #000;
 }
@@ -531,7 +496,7 @@ footer p {
         height: 40px;
     }
 
-    .arrow-up {
+    .circle i  {
         font-size: 18px;
     }
 
@@ -547,7 +512,7 @@ footer p {
         height: 40px;
     }
 
-    .arrow-up {
+    .circle i  {
         font-size: 16px;
     }
 

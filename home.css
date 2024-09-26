@@ -283,7 +283,7 @@ p {
     margin-top: 20px;
 }
 
-.social-icon {
+.social-icon{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -350,7 +350,10 @@ h2 {
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
-
+.contact-btn a{
+    color: var(--btn-text);
+    text-decoration: none;
+}
 .contact-btn:hover {
     transform: scale(1.05);
     background-color: var(--btn-hover-bg);
